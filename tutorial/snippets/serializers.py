@@ -5,7 +5,7 @@ from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     snippets = serializers.HyperlinkedRelatedField(many=True,
-                                                   view_name='snippet_detial',
+                                                   view_name='snippet-detail',
                                                    read_only=True)
 
     class Meta:
